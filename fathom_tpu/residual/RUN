@@ -1,0 +1,6 @@
+python residual.py --master grpc://$TPU_IP:8470  \
+  --learning_rate=0.01 \
+  --train_steps=10000 \
+  --batch_size=1024 \
+  --model_dir=gs://emmaproject/residual_work_tmp \
+  --data_dir=gs://cloudtpu-imagenet-data/train \

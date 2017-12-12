@@ -1,0 +1,5 @@
+python vgg.py --master grpc://$TPU_IP:8470  \
+  --data_dir=gs://cloudtpu-imagenet-data/train \
+  --learning_rate 0.0001 \
+  --train_steps 10000 \
+  --batch_size 16 \

@@ -1,0 +1,5 @@
+python alexnet.py --master grpc://$TPU_IP:8470  \
+  --data_dir=gs://cloudtpu-imagenet-data/train \
+  --learning_rate 0.001 \
+  --batch_size 1024 \
+  --train_steps 10000 \

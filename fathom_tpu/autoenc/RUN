@@ -1,0 +1,4 @@
+python autoenc.py --master grpc://$TPU_IP:8470  \
+  --train_file=gs://tfrc-test-bucket/mnist-records/train.tfrecords \
+  --train_steps=1000 \
+  --batch_size=128
