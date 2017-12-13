@@ -85,6 +85,13 @@ def model_fn(features, labels, mode, params):
     optimizer = tf.train.GradientDescentOptimizer(learning_rate=learning_rate)
 
   train_op = optimizer.minimize(loss, global_step=tf.train.get_global_step())
+  total = 0
+  for i in tf.global_variables():
+    t = 1
+    for j in i.get_shape():
+        t *= int(j)
+    total += t
+  print total
   return tpu_estimator.TPUEstimatorSpec(mode=mode, loss=loss, train_op=train_op)
 
 
